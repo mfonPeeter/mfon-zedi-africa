@@ -1,13 +1,32 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Providence";
+  src: local("Providence"), url("./fonts/Providence.ttf") format("truetype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Providence";
+  color: #555;
+  background-color: #efefef;
+}
+
+tr:nth-child(even) {
+  color: #fff;
+  background-color: #fa9254;
+}
+
+td {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @apply text-xl;
 }
